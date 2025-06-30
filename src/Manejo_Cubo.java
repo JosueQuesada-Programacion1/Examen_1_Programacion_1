@@ -92,7 +92,7 @@ public class Manejo_Cubo {
             System.out.println("Error, el vector de salarios no se ha inicializado");
             return;
         }
-        int[] aux = new int[cant_empleados];
+        int[] auxtot = new int[cant_empleados];
             for (int i = 0; i< cubo.length; i++){
                 for (int j = 0; j<cubo[i].length; j++){
                     aux[i] += cubo[i][j][0];
@@ -103,11 +103,14 @@ public class Manejo_Cubo {
                     aux[i] += cubo[i][j][5];
                 }
             }
+        int[] aux_sin_extra = new int[cant_empleados];
+        int[] aux_extra = new int[cant_empleados];
 
         System.out.printf("%-11s %-27s %-24s %-11s", "DATOS","HORAS NORMALES","HORAS EXTRA","SALARIO BRUTO");
         System.out.printf("%-11s %-9s %-9s %-9s %-8s %-8s %-8s %-11s", " ", "CANTIDAD", "VALOR", "MONTO", "CANTIDAD", "VALOR", "MONTO");
         for (int i = 0; i<Vec_empleados; i++){
-            System.out.printf("%-11s %-9s %-9s %-9s %-8s %-8s %-8s %-11s", Vec_empleados[i], aux[i], Vec_salarios[i], (aux[i]*Vec_salarios), aux[i], (Vec_salarios[i]*1.5),  (aux[i]*(Vec_salarios[i]*1.5));
+            System.out.printf("%-11s %-9s %-9s %-9s %-8s %-8s %-8s %-11s", Vec_empleados[i], aux_sin_extra[i], Vec_salarios[i], (aux_sin_extra[i]*Vec_salarios), aux_extra[i], (Vec_salarios[i]*1.5),  (aux_extra[i]*(Vec_salarios[i]*1.5), (aux_sin_extra[i]*Vec_salarios)+(aux_extra[i]*(Vec_salarios[i]*1.5);
+            System.out.printf("%-30s %-8s %-19s %-8s %-8s", );
         }
     }
     public static void main(String[] args) {
