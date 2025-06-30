@@ -118,5 +118,7 @@ public class Manejo_Cubo {
         x.Ini_Vec_Empleados();
         x.Ini_Cubo();
         x.Imp_Cubo();
+        x.Ini_Vec_Salarios();
+        x.Imp_Nomina();
     }
 }
